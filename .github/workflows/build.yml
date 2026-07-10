@@ -21,9 +21,14 @@ jobs:
         working-directory: ./app
         run: npm install
 
+      - name: Verify vite is installed
+        working-directory: ./app
+        run: npx vite --version
+
       - name: Build project
         working-directory: ./app
-        run: npx vite build
+        run: npm run build
+
 
       - name: Upload dist folder
         uses: actions/upload-artifact@v4
