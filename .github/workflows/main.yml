@@ -1,0 +1,15 @@
+name: Kimi AI Code Review
+on: [pull_request]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Kimi AI Agent
+        uses: MoonshotAI/kimi-actions@v1 # Example Kimi action
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          
