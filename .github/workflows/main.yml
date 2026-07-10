@@ -11,5 +11,5 @@ jobs:
       - name: Run Kimi AI Agent
         uses: MoonshotAI/kimi-actions@v1 # Example Kimi action
         env:
-          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_UNLOCK: ${{ secrets.KIMI_UNLOCK }}
           
