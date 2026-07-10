@@ -23,7 +23,7 @@ jobs:
 
       - name: Build project
         working-directory: ./app
-        run: npm run build
+        run: npx vite build
 
       - name: Upload dist folder
         uses: actions/upload-artifact@v4
